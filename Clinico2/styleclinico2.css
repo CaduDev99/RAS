@@ -1,0 +1,184 @@
+ body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f0ff 0%, #f9fbff 100%);
+            margin: 0;
+            padding: 0;
+            color: #1a237e;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 0.5px;
+        }
+
+        header {
+            background: linear-gradient(90deg, #e3f0ff 0%, #b3e5fc 100%);
+            color: #1a237e;
+            padding: 32px 0 16px 0;
+            box-shadow: 0 2px 12px rgba(33,150,243,0.08);
+            text-align: center;
+            border-bottom: 2px solid #90caf9;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .headerh1 h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            letter-spacing: 2px;
+            text-shadow: 0 0 8px #00c6ff, 0 0 2px #fff;
+            font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+            font-weight: 700;
+        }
+
+        main {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 32px 0 100px 0; /* Espaço para o footer fixo */
+        }
+
+        .form-paciente {
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background: #fafdff;
+            border-radius: 18px;
+            padding: 30px;
+            width: 380px;
+            max-width: 380px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            border: 2.5px solid #1976d2;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.2s, border 0.2s;
+        }
+
+        .container:hover {
+            box-shadow: 0 4px 32px 4px #00c6ff77, 0 0 0 2px #00c6ff;
+            border: 2px solid #00c6ff;
+        }
+
+        .container label {
+            color: #0d2357;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            font-size: 1.04rem;
+            letter-spacing: 0.2px;
+            width: 100%;
+        }
+
+        .input-padrao {
+            width: 100%;
+            padding: 12px 14px;
+            margin-top: 5px;
+            border: 2px solid #1976d2;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: #fff;
+            color: #1a237e;
+            box-sizing: border-box;
+            transition: border 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        .input-padrao:focus {
+            border: 2px solid #1976d2;
+            box-shadow: 0 0 0 2px #90caf9;
+        }
+
+        select.input-padrao {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231976d2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+        }
+
+.btn-finalizar {
+    width: 220px;            /* Largura ajustada para não ficar excessivo */
+    height: 50px;            /* Altura confortável para clique */
+    font-size: 1.05rem;
+    font-weight: 700;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;      /* Arredondamento similar aos inputs */
+    cursor: pointer;
+    margin: 20px auto;       /* Centraliza horizontalmente */
+    display: block;          /* Garante que o margin auto funcione */
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-finalizar:hover {
+    background: #1565c0;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(25, 118, 210, 0.3);
+}
+
+        #campo-hospital {
+            display: none; /* Escondido por padrão */
+            margin-top: 10px;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #e3f0ff 0%, #b3e5fc 100%);
+            color: #1976d2;
+            text-align: center;
+            padding: 18px 0 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 -2px 16px #90caf933;
+            border-top: 2px solid #90caf9;
+        }
+
+        footer h2 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 1.2px;
+            text-shadow: 0 0 6px #b3e5fc99, 0 0 2px #fff;
+        }
+
+        .link-voltar {
+    position: absolute; 
+    right: 32px; 
+    top: 32px;
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+/* Estilo do Botão - Aqui você controla o tamanho real */
+.btn-voltar {
+    width: 120px;         /* Ajuste a largura aqui */
+    height: 45px;        /* Ajuste a altura aqui */
+    font-size: 1rem;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #90caf933;
+    transition: background 0.3s; /* Bônus: efeito suave ao passar o mouse */
+}
+
+.btn-voltar:hover {
+    background: #1565c0;
+}

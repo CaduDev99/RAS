@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paciente Clínico</title>
+    <link rel="stylesheet" href="styleclinico2.css">
+</head>
+<body>
+
+    <header class="headerh1">
+        <h1>Paciente Clínico</h1>
+        <a href="../Clinico/clinico.html" class="link-voltar">
+        <button class="btn-voltar">Voltar</button>
+    </a>
+    </header>
+
+    <main>
+        <form class="container">
+            <label>Procedimentos realizados:
+                <textarea class="input-padrao" rows="3"></textarea>
+            </label>
+
+            <label>Orientação médica:
+                <input type="text" class="input-padrao">
+            </label>
+
+            <label>Médico Regulador:
+                <input type="text" class="input-padrao">
+            </label>
+
+            <label>Destino da Vítima:
+                <select class="input-padrao" id="destino" onchange="toggleHospitalField()">
+                    <option value="">Selecione...</option>
+                    <option value="hospital">Entregue ao Hospital</option>
+                    <option value="obito-local">Óbito no local</option>
+                    <option value="obito-atendimento">Óbito Durante o atendimento</option>
+                    <option value="recusou-atendimento">Recusou Atendimento</option>
+                    <option value="recusou-encaminhamento">Recusou Encaminhamento</option>
+                </select>
+            </label>
+
+            <label id="campo-hospital" style="display: none;">Nome do Hospital:
+                <input type="text" class="input-padrao">
+            </label>
+
+            <label>Integrantes da equipe:
+                <textarea class="input-padrao" rows="2"></textarea>
+            </label>
+
+            <button type="submit" class="btn-finalizar">Finalizar Ocorrência</button>
+        </form>
+    </main>
+
+    <footer>
+        <h2>Sistema de Atendimento Pré-Hospitalar</h2>
+    </footer>
+
+    <script>
+        function toggleHospitalField() {
+            const select = document.getElementById('destino');
+            const campo = document.getElementById('campo-hospital');
+            campo.style.display = (select.value === 'hospital') ? 'flex' : 'none';
+        }
+    </script>
+</body>
+</html>
