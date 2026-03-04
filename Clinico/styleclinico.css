@@ -1,0 +1,157 @@
+body{
+	width: 100%;
+	margin: 0;}
+
+a {
+	text-decoration: none !important;
+	color: inherit;
+}
+/* Labels dos formulários com cor forte e alinhamento vertical dos elementos */
+.container label {
+	color: #0d2357;
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
+	font-size: 1.04rem;
+	letter-spacing: 0.2px;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+/* Inputs e textarea padrão para formulários do sistema */
+.input-padrao {
+	width: 100%;
+	padding: 14px 16px;
+	margin-bottom: 4px;
+	border: 2px solid #1976d2;
+	border-radius: 8px;
+	font-size: 1.08rem;
+	background: #fff;
+	color: #1a237e;
+	box-sizing: border-box;
+	transition: border 0.2s, box-shadow 0.2s;
+	outline: none;
+}
+.input-padrao:focus {
+	border: 2px solid #1976d2;
+	outline: none;
+	box-shadow: 0 0 0 2px #90caf9;
+}
+.form-paciente {
+	width: 100%;
+	max-width: 380px; /* Ajustado para coincidir com a largura fixa dos containers e evitar expansão */
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+
+	.container {
+		background: #fafdff;
+		border-radius: 18px;
+		padding: 38px 48px;
+		width: 380px;
+		max-width: 380px;
+		min-width: 380px;
+		min-height: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
+		border: 2.5px solid #1976d2;
+		position: relative;
+		overflow: hidden;
+		transition: box-shadow 0.2s, border 0.2s;
+	}
+	.container:hover {
+		box-shadow: 0 4px 32px 4px #00c6ff77, 0 0 0 2px #00c6ff;
+		border: 2px solid #00c6ff;
+	}
+	.container h2 {
+		margin: 0;
+		color: #1976d2;
+		font-size: 1.6rem;
+		font-weight: 700;
+		text-shadow: 0 0 6px #b3e5fc99, 0 0 2px #fff;
+		font-family: 'Segoe UI', Arial, sans-serif;
+		letter-spacing: 1.2px;
+		z-index: 1;
+		position: relative;
+	}
+
+	footer, Footer {
+		background: linear-gradient(90deg, #e3f0ff 0%, #b3e5fc 100%);
+		color: #1976d2;
+		text-align: center;
+		padding: 18px 0 10px 0;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100vw;
+		z-index: 100;
+		box-shadow: 0 -2px 16px #90caf933;
+		border-top: 2px solid #90caf9;
+		letter-spacing: 1px;
+	}
+	footer h2, Footer h2 {
+		margin: 0;
+		font-size: 1.1rem;
+		font-weight: 400;
+		letter-spacing: 1.2px;
+		text-shadow: 0 0 6px #b3e5fc99, 0 0 2px #fff;
+		font-family: 'Segoe UI', Arial, sans-serif;}
+	
+
+	header {
+		background: linear-gradient(90deg, #e3f0ff 0%, #b3e5fc 100%);
+		color: #1a237e;
+		padding: 32px 0 16px 0;
+		box-shadow: 0 2px 12px rgba(33,150,243,0.08);
+		text-align: center;
+		border-bottom: 2px solid #90caf9;
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		margin: 0;
+	}
+
+	.headerh1 h1 {
+		margin: 0;
+		font-size: 2.4rem;
+		letter-spacing: 2px;
+		text-shadow: 0 0 8px #00c6ff, 0 0 2px #fff;
+		font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+		font-weight: 700;
+}
+
+/* Posicionamento do link */
+.link-voltar {
+    position: absolute; 
+    right: 32px; 
+    top: 32px;
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+/* Estilo do Botão - Aqui você controla o tamanho real */
+.btn-voltar {
+    width: 120px;         /* Ajuste a largura aqui */
+    height: 45px;        /* Ajuste a altura aqui */
+    font-size: 1rem;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #90caf933;
+    transition: background 0.3s; /* Bônus: efeito suave ao passar o mouse */
+}
+
+.btn-voltar:hover {
+    background: #1565c0;
+}
