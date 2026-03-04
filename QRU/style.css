@@ -234,4 +234,138 @@ footer h2, Footer h2 {
 	letter-spacing: 1.2px;
 	text-shadow: 0 0 6px #b3e5fc99, 0 0 2px #fff;
 	font-family: 'Segoe UI', Arial, sans-serif;
+	}
+
+	/* Responsividade para dispositivos móveis */
+	@media (max-width: 600px) {
+		body {
+			padding: 0;
+			font-size: 0.98rem;
+		}
+		header {
+			padding: 18px 0 10px 0;
+			font-size: 1rem;
+		}
+		.headerh1 h1 {
+			font-size: 1.3rem;
+			letter-spacing: 1px;
+		}
+		main {
+			padding: 10px 0 60px 0;
+		}
+		section {
+			flex-direction: column;
+			gap: 24px;
+			align-items: center;
+			padding: 0 4vw;
+		}
+		.container, .container1 {
+			width: 98vw;
+			min-width: unset;
+			max-width: 99vw;
+			padding: 18px 6vw;
+			margin: 8px 0;
+			box-sizing: border-box;
+		}
+		.container h2, .container1 h2 {
+			font-size: 1.1rem;
+			text-align: center;
+		}
+		.input-padrao {
+			font-size: 1rem;
+			padding: 10px 8px;
+		}
+		.form-paciente {
+			max-width: 99vw;
+			padding: 0 2vw;
+		}
+		footer, Footer {
+			font-size: 0.95rem;
+			padding: 10px 0 8px 0;
+		}
+		.container-link {
+			height: auto;
+		}
+	}
+
+	/* ... (Seu código anterior permanece igual até a Media Query) ... */
+
+/* Ajustes na estrutura base para evitar quebras */
+.container, .container1 {
+    max-width: 100%; /* Garante que nunca ultrapasse o pai */
+    min-width: 0;    /* Permite encolher abaixo do valor original se necessário */
+}
+
+/* --- Responsividade para dispositivos móveis --- */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        font-size: 0.95rem;
+        /* Removido o overflow oculto para permitir scroll natural */
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    .headerh1 h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+
+    main {
+        padding: 20px 10px 80px 10px; /* Padding inferior maior por causa do footer */
+        display: block; /* Facilita o fluxo vertical em telas pequenas */
+    }
+
+    section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Ajuste dos Containers para Mobile */
+    .container, .container1 {
+        width: 92%;         /* Margem suave nas laterais */
+        max-width: 380px;   /* Mantém o design original sem esticar demais */
+        min-width: unset;
+        padding: 25px 20px;
+        margin: 0 auto;
+        height: auto;       /* Deixa o conteúdo definir a altura */
+    }
+
+    .container-link {
+        height: auto;       /* Reseta a altura fixa de 220px */
+        width: 100%;
+    }
+
+    .container h2, .container1 h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Ajuste de Formulários */
+    .form-paciente {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .input-padrao {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* Footer Mobile */
+    footer, Footer {
+        position: relative; /* Evita cobrir o conteúdo em telas muito baixas */
+        width: 100%;
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+
+    footer h2, Footer h2 {
+        font-size: 0.9rem;
+    }
 }

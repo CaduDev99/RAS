@@ -182,3 +182,86 @@
 .btn-voltar:hover {
     background: #1565c0;
 }
+
+/* ... (Seu CSS original acima permanece) ... */
+
+/* --- Ajustes de Responsividade --- */
+@media (max-width: 600px) {
+    /* Ajuste de Header e Botão Voltar */
+    header {
+        padding: 70px 15px 20px 15px; /* Espaço extra para o botão voltar acima do título */
+    }
+
+    .headerh1 h1 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .link-voltar {
+        right: 0;
+        left: 0;
+        top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-voltar {
+        width: 90%;
+        max-width: 150px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste do Main e Container */
+    main {
+        padding: 20px 10px 120px 10px; /* Padding inferior para não cobrir o botão finalizar */
+    }
+
+    .container {
+        width: 95%;         /* Ocupa quase toda a largura lateral */
+        max-width: 100%;    /* Remove a trava de 380px */
+        min-width: unset;
+        padding: 20px 15px; /* Padding reduzido para ganhar espaço nos inputs */
+        margin: 10px auto;
+    }
+
+    .container label {
+        font-size: 1rem;
+        margin-bottom: 15px; /* Mais espaço entre um campo e outro */
+    }
+
+    .input-padrao {
+        font-size: 16px;    /* 16px evita o zoom automático do iOS ao focar no input */
+        padding: 12px;
+    }
+
+    /* Botão Finalizar */
+    .btn-finalizar {
+        width: 90%;         /* Botão mais largo para facilitar o clique */
+        max-width: 300px;
+        height: 55px;       /* Levemente mais alto para área de toque (touch target) */
+        font-size: 1.1rem;
+    }
+
+    /* Footer Mobile */
+    footer {
+        position: relative; /* Evita que o rodapé "suba" quando o teclado abrir */
+        padding: 20px 10px;
+        margin-top: 20px;
+    }
+
+    footer h2 {
+        font-size: 0.95rem;
+    }
+}
+
+/* Ajuste específico para telas muito pequenas (ex: iPhone SE) */
+@media (max-width: 360px) {
+    .headerh1 h1 {
+        font-size: 1.2rem;
+    }
+    
+    .container {
+        padding: 15px 10px;
+    }
+}
