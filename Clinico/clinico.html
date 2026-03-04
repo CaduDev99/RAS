@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../QRU/style.css">
+    <title>Paciente Clinico</title>
+</head>
+<body>
+    <header>
+        <div class="headerh1">
+            <h1>Paciente Clínico</h1>
+        </div>
+        <a href="../QRU/QRU.html" class="container-link" style="position: absolute; right: 32px; top: 32px;">
+            <button class="container" style="padding: 10px 22px; font-size: 1rem; background: #1976d2; color: #fff; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 8px #90caf933;">Voltar</button>
+        </a>
+    </header>
+    <main>
+        <form class="form-paciente">
+            <section class="container">
+                <h2>Informações do Paciente</h2>
+                <label>Nome:<br><input type="text" name="nome" required class="input-padrao"></label><br>
+                <label>Idade:<br><input type="number" name="idade" required class="input-padrao"></label><br>
+                <label>CPF:<br><input type="text" name="cpf" required class="input-padrao"></label><br>
+                <label>Sexo:<br>
+                    <select name="sexo" required class="input-padrao">
+                        <option value="">Selecione</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </label>
+            </section>
+            <section class="container">
+                <h2>Queixa, Sinais e Sintomas</h2>
+                <label>Queixa:<br><input type="text" name="queixa" required class="input-padrao"></label><br>
+                <label>Sinais e Sintomas:<br><textarea name="sinais_sintomas" required class="input-padrao"></textarea></label>
+            </section>
+            <section class="container">
+                <h2>Sinais Vitais</h2>
+                <label>P.A:<br><input type="text" name="pa" class="input-padrao"></label><br>
+                <label>FC:<br><input type="text" name="fc" class="input-padrao"></label><br>
+                <label>FR:<br><input type="text" name="fr" class="input-padrao"></label><br>
+                <label>Spo2:<br><input type="text" name="spo2" class="input-padrao"></label><br>
+                <label>HGT:<br><input type="text" name="hgt" class="input-padrao"></label>
+            </section>
+            <section class="container">
+                <h2>Observações</h2>
+                <textarea name="observacoes" class="input-padrao"></textarea>
+            </section>
+            <div style="text-align: right; margin-bottom: 100px;">
+                <button type="submit" class="container" style="padding: 12px 32px; font-size: 1.1rem; background: #1976d2; color: #fff; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 8px #90caf933;">Próximo</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <h2>Sistema desenvolvido para simulações de atendimentos</h2>
+    </footer>
+</body>
+</html>
