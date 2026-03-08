@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,14 @@
     </header>
     <main>
         <section style="display: flex; justify-content: center; gap: 48px; margin: 60px 0; flex-wrap: wrap;">
-            <a href="Clinico/clinico.html" class="container-link" style="flex: 1 1 260px; max-width: 340px; min-width: 220px;">
+            <a href="Clinico/clinico.html" class="container-link" onclick="setTipo('CLÍNICO')" style="flex: 1 1 260px; max-width: 340px; min-width: 220px;">
                 <div class="container" style="display: flex; flex-direction: column; align-items: center; padding: 36px 24px; background: #e3f2fd; border-radius: 18px; box-shadow: 0 2px 16px #90caf933; transition: transform 0.2s;">
                     <span style="font-size: 3rem; color: #1976d2; margin-bottom: 12px;">&#128137;</span>
                     <h2 style="margin: 0; color: #0d2357;">Clínico</h2>
                 </div>
             </a>
-            <a href="../Trauma/trauma.html" class="container-link" style="flex: 1 1 260px; max-width: 340px; min-width: 220px;">
+            
+            <a href="../Trauma/trauma.html" class="container-link" onclick="setTipo('TRAUMA')" style="flex: 1 1 260px; max-width: 340px; min-width: 220px;">
                 <div class="container" style="display: flex; flex-direction: column; align-items: center; padding: 36px 24px; background: #ffebee; border-radius: 18px; box-shadow: 0 2px 16px #ffcdd233; transition: transform 0.2s;">
                     <span style="font-size: 3rem; color: #d32f2f; margin-bottom: 12px;">&#128657;</span>
                     <h2 style="margin: 0; color: #b71c1c;">Trauma</h2>
@@ -28,8 +29,10 @@
             </a>
         </section>
     </main>
-    <Footer>
-        <H2>Sistema desenvolvido para simulações de atendimentos</H2> 
-    </Footer>
+    <footer>
+        <h2>Sistema desenvolvido para simulações de atendimentos</h2> 
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

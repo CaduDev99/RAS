@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paciente Clínico</title>
+    <title>Paciente Clínico - Finalização</title>
     <link rel="stylesheet" href="styleclinico2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
     <header class="headerh1">
         <h1>Paciente Clínico</h1>
         <a href="../Clinico/clinico.html" class="link-voltar">
-        <button class="btn-voltar">Voltar</button>
-    </a>
+            <button type="button" class="btn-voltar">Voltar</button>
+        </a>
     </header>
 
     <main>
-        <form class="container">
+        <form class="container" id="formFinal">
             <label>Procedimentos realizados:
-                <textarea class="input-padrao" rows="3"></textarea>
+                <textarea name="procedimentos" class="input-padrao" rows="3"></textarea>
             </label>
 
             <label>Orientação médica:
-                <input type="text" class="input-padrao">
+                <input type="text" name="orientacao" class="input-padrao">
             </label>
 
             <label>Médico Regulador:
-                <input type="text" class="input-padrao">
+                <input type="text" name="medico" class="input-padrao">
             </label>
 
             <label>Destino da Vítima:
-                <select class="input-padrao" id="destino" onchange="toggleHospitalField()">
+                <select name="destino" class="input-padrao" id="destino" onchange="toggleHospitalField()">
                     <option value="">Selecione...</option>
                     <option value="hospital">Entregue ao Hospital</option>
                     <option value="obito-local">Óbito no local</option>
@@ -41,14 +42,16 @@
             </label>
 
             <label id="campo-hospital" style="display: none;">Nome do Hospital:
-                <input type="text" class="input-padrao">
+                <input type="text" name="nome_hospital" class="input-padrao">
             </label>
 
             <label>Integrantes da equipe:
-                <textarea class="input-padrao" rows="2"></textarea>
+                <textarea name="equipe" class="input-padrao" rows="2"></textarea>
             </label>
 
-            <button type="submit" class="btn-finalizar">Finalizar Ocorrência</button>
+            <button type="button" class="btn-finalizar" onclick="salvarDadosEAvancar(3, '../finalizar.html')">
+             Finalizar Ocorrência
+            </button>
         </form>
     </main>
 
@@ -56,11 +59,12 @@
         <h2>Sistema desenvolvido para simulações de atendimentos</h2>
     </footer>
 
+    <script src="../script.js"></script>
     <script>
         function toggleHospitalField() {
             const select = document.getElementById('destino');
             const campo = document.getElementById('campo-hospital');
-            campo.style.display = (select.value === 'hospital') ? 'flex' : 'none';
+            campo.style.display = (select.value === 'hospital') ? 'block' : 'none';
         }
     </script>
 </body>
