@@ -1,147 +1,56 @@
-body{
-	width: 100%;
-	margin: 0;}
+/* --- Estilos Globais e Reset --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #f9fbff 100%);
+    margin: 0;
+    padding: 0;
+    color: #1a237e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.5px;
+    width: 100%;
+    overflow-x: hidden;
+}
 
 a {
-	text-decoration: none !important;
-	color: inherit;
-}
-/* Labels dos formulários com cor forte e alinhamento vertical dos elementos */
-.container label {
-	color: #0d2357;
-	font-weight: 600;
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 0;
-	font-size: 1.04rem;
-	letter-spacing: 0.2px;
-}
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-}
-/* Inputs e textarea padrão para formulários do sistema */
-.input-padrao {
-	width: 100%;
-	padding: 14px 16px;
-	margin-bottom: 4px;
-	border: 2px solid #1976d2;
-	border-radius: 8px;
-	font-size: 1.08rem;
-	background: #fff;
-	color: #1a237e;
-	box-sizing: border-box;
-	transition: border 0.2s, box-shadow 0.2s;
-	outline: none;
-}
-.input-padrao:focus {
-	border: 2px solid #1976d2;
-	outline: none;
-	box-shadow: 0 0 0 2px #90caf9;
-}
-.form-paciente {
-	width: 100%;
-	max-width: 380px; /* Ajustado para coincidir com a largura fixa dos containers e evitar expansão */
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	}
-
-	.container {
-		background: #fafdff;
-		border-radius: 18px;
-		padding: 38px 48px;
-		width: 380px;
-		max-width: 380px;
-		min-width: 380px;
-		min-height: 100%;
-		height: 100%;
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin: 10px;
-		border: 2.5px solid #1976d2;
-		position: relative;
-		overflow: hidden;
-		transition: box-shadow 0.2s, border 0.2s;
-	}
-	.container:hover {
-		box-shadow: 0 4px 32px 4px #00c6ff77, 0 0 0 2px #00c6ff;
-		border: 2px solid #00c6ff;
-	}
-	.container h2 {
-		margin: 0;
-		color: #1976d2;
-		font-size: 1.6rem;
-		font-weight: 700;
-		text-shadow: 0 0 6px #b3e5fc99, 0 0 2px #fff;
-		font-family: 'Segoe UI', Arial, sans-serif;
-		letter-spacing: 1.2px;
-		z-index: 1;
-		position: relative;
-	}
-
-	footer, Footer {
-		background: linear-gradient(90deg, #e3f0ff 0%, #b3e5fc 100%);
-		color: #1976d2;
-		text-align: center;
-		padding: 18px 0 10px 0;
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		width: 100vw;
-		z-index: 100;
-		box-shadow: 0 -2px 16px #90caf933;
-		border-top: 2px solid #90caf9;
-		letter-spacing: 1px;
-	}
-	footer h2, Footer h2 {
-		margin: 0;
-		font-size: 1.1rem;
-		font-weight: 400;
-		letter-spacing: 1.2px;
-		text-shadow: 0 0 6px #b3e5fc99, 0 0 2px #fff;
-		font-family: 'Segoe UI', Arial, sans-serif;}
-	
-
-	header {
-		background: linear-gradient(90deg, #e3f0ff 0%, #b3e5fc 100%);
-		color: #1a237e;
-		padding: 32px 0 16px 0;
-		box-shadow: 0 2px 12px rgba(33,150,243,0.08);
-		text-align: center;
-		border-bottom: 2px solid #90caf9;
-		position: relative;
-		z-index: 2;
-		width: 100%;
-		margin: 0;
-	}
-
-	.headerh1 h1 {
-		margin: 0;
-		font-size: 2.4rem;
-		letter-spacing: 2px;
-		text-shadow: 0 0 8px #00c6ff, 0 0 2px #fff;
-		font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
-		font-weight: 700;
+    text-decoration: none !important;
+    color: inherit;
 }
 
-/* Posicionamento do link */
+/* --- Header --- */
+header {
+    background: linear-gradient(90deg, #e3f0ff 0%, #b3e5fc 100%);
+    color: #1a237e;
+    padding: 32px 0 16px 0;
+    box-shadow: 0 2px 12px rgba(33,150,243,0.08);
+    text-align: center;
+    border-bottom: 2px solid #90caf9;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.headerh1 h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00c6ff, 0 0 2px #fff;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+}
+
+/* --- Botão Voltar (Header) --- */
 .link-voltar {
     position: absolute; 
     right: 32px; 
     top: 32px;
-    text-decoration: none; /* Remove sublinhado do link */
+    text-decoration: none;
 }
 
-/* Estilo do Botão - Aqui você controla o tamanho real */
 .btn-voltar {
-    width: 120px;         /* Ajuste a largura aqui */
-    height: 45px;        /* Ajuste a altura aqui */
+    width: 120px;
+    height: 45px;
     font-size: 1rem;
     background: #1976d2;
     color: #fff;
@@ -149,92 +58,178 @@ a {
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 0 2px 8px #90caf933;
-    transition: background 0.3s; /* Bônus: efeito suave ao passar o mouse */
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn-voltar:hover {
     background: #1565c0;
+    transform: translateY(-1px);
 }
 
-/* ... (Seu código original permanece até a Media Query) ... */
+/* --- Layout Principal --- */
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+}
 
-/* Ajuste preventivo para evitar que largura fixa quebre o layout */
+/* --- Containers --- */
 .container {
-    min-width: unset; 
+    background: #fafdff;
+    border-radius: 18px;
+    padding: 38px 48px;
+    width: 380px;
+    max-width: 380px;
+    min-width: 380px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center;  /* Centraliza o texto */
+    margin: 10px;
+    border: 2.5px solid #1976d2;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s, border 0.2s;
 }
 
-/* --- Responsividade para dispositivos móveis --- */
-@media (max-width: 650px) {
-    body {
-        width: 100%;
-        overflow-x: hidden; /* Evita scroll horizontal acidental */
-    }
+.container:hover {
+    box-shadow: 0 4px 32px 4px #00c6ff77, 0 0 0 2px #00c6ff;
+    border: 2px solid #00c6ff;
+}
 
-    /* Ajuste do Header para acomodar o botão Voltar */
+.container h2 {
+    margin: 0 0 15px 0;
+    color: #1976d2;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-shadow: 0 0 6px #b3e5fc99, 0 0 2px #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1.2px;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+}
+
+/* --- Formulários e Inputs --- */
+.form-paciente {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container label {
+    color: #0d2357;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    font-size: 1.04rem;
+    letter-spacing: 0.2px;
+    width: 100%;
+    text-align: left; /* Mantém o texto da label alinhado à esquerda para leitura */
+}
+
+.input-padrao {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 5px;
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    background: #fff;
+    color: #1a237e;
+    box-sizing: border-box;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.input-padrao:focus {
+    border: 2px solid #1976d2;
+    box-shadow: 0 0 0 2px #90caf9;
+}
+
+/* --- Rodapé --- */
+footer {
+    background: linear-gradient(90deg, #e3f0ff 0%, #b3e5fc 100%);
+    color: #1976d2;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 -2px 16px #90caf933;
+    border-top: 2px solid #90caf9;
+    letter-spacing: 1px;
+}
+
+footer h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    text-shadow: 0 0 6px #b3e5fc99, 0 0 2px #fff;
+}
+
+/* --- MEDIA QUERIES (Responsividade) --- */
+@media (max-width: 650px) {
     header {
-        padding: 60px 10px 20px 10px; /* Mais espaço no topo para o botão */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 70px 15px 20px 15px; /* Espaço para o botão voltar centralizado */
     }
 
     .headerh1 h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         letter-spacing: 1px;
     }
 
-    /* Reposicionando o link Voltar para não flutuar sobre o título */
     .link-voltar {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        left: 10px; /* Faz o botão ocupar a largura total ou centralizar */
+        right: 0;
+        left: 0;
+        top: 15px;
         display: flex;
         justify-content: center;
     }
 
     .btn-voltar {
-        width: 100%; /* Botão "Voltar" vira uma barra no topo ou... */
-        max-width: 200px; /* ...mantém um tamanho razoável centralizado */
+        width: 140px;
         height: 38px;
         font-size: 0.9rem;
     }
 
-    /* Ajuste do Container Central */
+    main {
+        padding: 20px 10px 100px 10px;
+    }
+
     .container {
-        width: 90%;
-        max-width: 380px; /* Mantém o limite visual que você definiu */
-        margin: 20px auto 100px auto;
+        width: 92%;
+        min-width: unset;
+        max-width: 380px;
         padding: 25px 20px;
+        margin: 10px auto;
         height: auto;
-        min-height: unset;
     }
 
     .container h2 {
         font-size: 1.3rem;
         text-align: center;
-        margin-bottom: 15px;
-    }
-
-    /* Formulários e Inputs */
-    .form-paciente {
-        max-width: 100%;
     }
 
     .input-padrao {
+        font-size: 16px; /* Evita zoom automático no mobile */
         padding: 12px;
-        font-size: 1rem;
     }
 
-    /* Rodapé */
-    footer, Footer {
-        position: relative; /* Melhor para mobile para não sobrepor inputs */
-        width: 100%;
-        padding: 15px 0;
-        margin-top: 30px;
-    }
-
-    footer h2, Footer h2 {
-        font-size: 0.9rem;
+    footer {
+        position: relative; /* Evita sobreposição ao digitar */
+        margin-top: 20px;
     }
 }
